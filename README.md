@@ -13,4 +13,7 @@ For this project our team will use python, adding the threading library.
 
 ## Contributors
 * David Rafael Arancibia Escobar as ApplesOranges
-* TODO: add all names
+* Emmanuel Cortés Rosas
+* Alejandro Escalante Hernández
+* Kevin Germán Suárez Carbajal
+* Abdiel Vladimir Romero Velázquez
