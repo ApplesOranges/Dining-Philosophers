@@ -8,8 +8,9 @@ states = []
 
 def showStates():
     j = 0
-    for fil in Filosofos:
-        states.append(fil.status)
+    if states.length < 5:
+        for fil in Filosofos:
+            states.append(fil.status)
     print(states)
 
 for fil in Filosofos:
