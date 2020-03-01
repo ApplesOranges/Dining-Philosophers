@@ -13,7 +13,7 @@ For this project our team will use python, adding the threading library.
 
 ## Contributors
 * David Rafael Arancibia Escobar as ApplesOranges
-* Emmanuel Cortés Rosas
-* Alejandro Escalante Hernández
-* Kevin Germán Suárez Carbajal
-* Abdiel Vladimir Romero Velázquez
+* Emmanuel Cortés Rosas as emmcors
+* Alejandro Escalante Hernández as EskerOn
+* Kevin Germán Suárez Carbajal as NyvekFearless 
+* Abdiel Vladimir Romero Velázquez as Vencigetorix
