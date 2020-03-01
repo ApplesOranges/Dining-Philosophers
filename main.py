@@ -3,16 +3,14 @@ from filosofo import Filosofo
 lock = threading.RLock()
 Filosofos = [Filosofo(lock) for i in range(5)]
 i=0
-thrds=[]
+thrds = []
 states = []
-
 
 def showStates():
     j = 0
     for fil in Filosofos:
-        states[j] = fil.status
+        states.append(fil.status)
     print(states)
-
 
 for fil in Filosofos:
     if (i == 4):
@@ -24,7 +22,7 @@ for fil in Filosofos:
 i = 0
 
 for fil in Filosofos:
-    thrds[i] = threading.Thread(fil.run())
+    thrds.append(threading.Thread(fil.run()))
     thrds[i].start()
-    i+=1
+    i += 1
     showStates()
