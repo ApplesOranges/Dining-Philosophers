@@ -84,7 +84,7 @@ We also add the function <i>"spendTime()"</i> wich lets time pass without doing 
     def setRight(self,fil):
         self.right=fil
     def spendTime(self):
-        time.sleep(5)
+        time.sleep(random.randint(0, 5))
 ```
 The taste function verifies that none of the adjacent philosophers is eating and, if possible, changes state from 'H' (hungry) to 'E' (eating).
 
