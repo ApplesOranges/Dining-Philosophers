@@ -121,8 +121,9 @@ Both of the next functions call <i>"spendTime()"</i> therefore they lose time wi
 The <i>"run()"</i> function calls each function in propper order.
 ```python
     def run(self):
-        self.think()
-        self.takeFork()
-        self.eat()
-        self.leaveFork()
+        while True:
+            self.think()
+            self.takeFork()
+            self.eat()
+            self.leaveFork()
 ```        
