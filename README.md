@@ -35,11 +35,13 @@ The function <i>"showStates()"</i> fills a list with the current state of each p
 
 ```python
 def showStates():
-    j = 0
-    if states.length < 5:
+    global states
+    while(True):
         for fil in Filosofos:
             states.append(fil.status)
-    print(states)
+        sys.stdout.write("\r"+str(states))
+        sys.stdout.flush()
+        states = []
 ```
 Here we are simply defining the left and right philosopher sitting at each side.
 
@@ -56,11 +58,10 @@ i = 0
 Then we start each thread and we print the state in each case.
 
 ```python
+log = threading.Thread(target=showStates)
+log.start()
 for fil in Filosofos:
-    thrds.append(threading.Thread(fil.run()))
-    thrds[i].start()
-    i += 1
-    showStates()
+    fil.start()
 ```
 ### filosofo.py
 
