@@ -7,11 +7,12 @@ thrds = []
 states = []
 
 def showStates():
+    global states
     j = 0
-    if states.length < 5:
-        for fil in Filosofos:
-            states.append(fil.status)
+    for fil in Filosofos:
+        states.append(fil.status)
     print(states)
+    states = []
 
 for fil in Filosofos:
     if (i == 4):
@@ -26,4 +27,5 @@ for fil in Filosofos:
     thrds.append(threading.Thread(fil.run()))
     thrds[i].start()
     i += 1
+while(True):
     showStates()
