@@ -1,6 +1,7 @@
 #H=hungry, E=eating, T=thinking
 import threading
 import time
+import random
 class Filosofo(threading.Thread):
     def __init__(self, lock):
         threading.Thread.__init__(self)
@@ -13,7 +14,7 @@ class Filosofo(threading.Thread):
     def setRight(self,fil):
         self.right=fil
     def spendTime(self):
-        time.sleep(5)
+        time.sleep(random.randint(0, 5))
     def taste(self):
         if(self.status== "H" and self.left.status!="E" and self.right.status!="E"):
             self.lock.acquire()
@@ -35,7 +36,8 @@ class Filosofo(threading.Thread):
     def think(self):
         self.spendTime()
     def run(self):
-        self.think()
-        self.takeFork()
-        self.eat()
-        self.leaveFork()
+        while True:
+            self.think()
+            self.takeFork()
+            self.eat()
+            self.leaveFork()
