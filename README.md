@@ -95,8 +95,8 @@ The taste function verifies that none of the adjacent philosophers is eating and
             self.status="E"
             self.lock.release()
 ```
-<i>"takeFork()" changes the state from 'T' to 'H' and calls the function <i>"taste()"</i>.
-<i>"leaveFork()" changes the state from 'E' to 'T and calls the function <i>"taste()"</i> for the adjacent philosophers.
+<i>"takeFork()"</i> changes the state from 'T' to 'H' and calls the function <i>"taste()".
+<i>"leaveFork()"</i> changes the state from 'E' to 'T and calls the function <i>"taste()"</i> for the adjacent philosophers.
 ```python
     def takeFork(self):
         self.lock.acquire()
